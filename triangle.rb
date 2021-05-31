@@ -22,7 +22,6 @@ def triangle(a, b, c)
     (a + c <= b) ||
     (b + c <= a)
 
-
   return :equilateral if (a == b && b == c)
 
   return :isosceles if
