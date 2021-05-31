@@ -15,6 +15,14 @@
 #
 def triangle(a, b, c)
 
+  raise TriangleError if (a < 1 || b < 1 || c < 1)
+
+  raise TriangleError if
+    (a + b <= c) ||
+    (a + c <= b) ||
+    (b + c <= a)
+
+
   return :equilateral if (a == b && b == c)
 
   return :isosceles if
